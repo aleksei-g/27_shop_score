@@ -1,7 +1,37 @@
 # Shop Score Page
 
-{TODO. There will be project description}
+# Рейтинг магазина
 
+Это приложение представляет из себя HTML страницу, на которой отображается 
+информация о максимальном времени ожидания еще не обработанных заявок с начала 
+дня командой менеджеров интернет магазина, количество необработанных заказов, 
+их общаяя сумма в денежном выражении, а так же количество обработанных заказов 
+с начала дня. Пример такой страницы доступен по [сслылке]().
+
+# Установка
+
+Для корректной установки зависимостей необходимо, чтобы в системе были 
+установлены следующие пакеты `libpq-dev` и `python-dev`. Если они отсутствуют,
+выполните их установку с помощью команды (Debian/Ubuntu):
+```
+sudo apt install libpq-dev python3-dev
+```
+
+Затем необходимо установить зависимости перечисленные в файле 
+`requirements.txt`, запустив команду: 
+```
+pip install -r requirements.txt
+```
+
+# Запуск
+
+Для запуска приложения необходимо выполнить команду:
+```
+gunicorn server:app
+```
+Приложение будет находиться по адресу 
+[http://127.0.0.1:8000](http://127.0.0.1:8000).
 # Project Goals
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+The code is written for educational purposes. Training course for
+web-developers - [DEVMAN.org](https://devman.org)
