@@ -31,13 +31,22 @@
                 </div>
                 <div class="row row-wait-time ">
                     <div class="col-md-12 center-block text-center centered">
-                        <h1 class="wait-time-text">{{ wait_time }}</h1>
+                        <h1 class="wait-time-text dynamic_color">{{ wait_time }}</h1>
                     </div>
                 </div>
                 <div class="row row-footer">
                     <div class="col-md-12">
-                        <p class="footer-text">{{ count_not_confirmed_order }} необработанных заявок за день на сумму {{ price_sum }} руб.<br>
-                           {{ count_confirmed_orders }} обработанных заявок за день.</p>
+                        <p class="footer-text text-center">Не обработано заявок
+                            <span class="param-text dynamic_color">{{ count_not_confirmed_order }}</span> шт., на сумму
+                            <span class="param-text dynamic_color">
+                            {% if price_sum % 1 == 0 %}
+                                {{ '{:,.0f}'.format(price_sum).replace(',', ' ') }}
+                            {% else %}
+                                {{ '{:,.2f}'.format(price_sum).replace(',', ' ') }}
+                            {% endif %}
+                            </span>руб.
+                            <br>Обработано заявок <span class="param-text dynamic_color">{{ count_confirmed_orders }}</span> шт.
+                        </p>
                     </div>
                 </div>
             </div>

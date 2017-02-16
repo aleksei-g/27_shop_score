@@ -1,16 +1,14 @@
 .row-header {
-    display: flex;
     height: 20vh;
 }
 
 .row-wait-time {
     display: flex;
-    height: 60vh;
+    height: 55vh;
 }
 
 .row-footer {
-    display: flex;
-    height: 20vh;
+    height: 25vh;
 }
 
 .header-text {
@@ -18,11 +16,16 @@
 }
 
 .wait-time-text {
-    font-size: 15vmax;
+    font-size: 13vmax;
 }
 
 .footer-text {
     font-size: 3vmax;
+}
+
+.param-text {
+    font-size: 4vmax;
+    font-weight: bold;
 }
 
 .centered {
